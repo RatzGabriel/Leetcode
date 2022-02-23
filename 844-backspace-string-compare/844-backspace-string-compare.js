@@ -24,5 +24,8 @@ var backspaceCompare = function(s, t) {
     }
         return saveStringS
     }
+    let a = deleteIt(s)
+    let b = deleteIt(t)
+   
     return deleteIt(s)===deleteIt(t)
 };
