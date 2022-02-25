@@ -10,8 +10,6 @@ let saveArray=[...arr].sort((a,b)=>{
 let saveArrayB=[...arr].sort((a,b)=>{
     return b-a
 })
-
-let checkIfTrue=false;
     
 function checkIfConsec(inp){
     let diff=0;
