@@ -3,30 +3,6 @@
  * @return {boolean}
  */
 var canMakeArithmeticProgression = function(arr) {
-    // 1) Interpret the Prompt
-//      arithemtic progression= if diff between
-//      any two consecutive elements is same
-//      given numbers[] return true if it can be 
-//      rearranged to form ari prog. else return false
-// 2)
-
-//   I:number[]
-
-//   O:boolean
-
-
-// 4) High Level Strategys
-
-//      1.iterate over array and check if it is true
-//            else reorder it as many times as possible
-    //           always check again, if true return true
-     //             at the end return false 
-
-//      2. make as many arrays as possible reorders
-//          check each array if it is true
-    //        at the end return false 
-
-// 6) Implement the solution
 
 let saveArray=[...arr].sort((a,b)=>{
     return a-b
@@ -48,12 +24,9 @@ function checkIfConsec(inp){
        return check
     }
   if(checkIfConsec(saveArray)){return true}
-    else if(checkIfConsec(saveArrayB)){
+  else if(checkIfConsec(saveArrayB)){
         return true
     }
   else return false
     
-
-    
-
 };
