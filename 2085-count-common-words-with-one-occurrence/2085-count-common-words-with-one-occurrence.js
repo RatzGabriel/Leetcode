@@ -4,7 +4,6 @@
  * @return {number}
  */
 var countWords = function(words1, words2) {
-
     let uniqueArray1=words1.reduce((acc,sum)=>{
         if(acc[sum]===undefined){
         acc[sum]=1
@@ -30,7 +29,6 @@ var countWords = function(words1, words2) {
        let count=0;
   
    for(let key in uniqueArray1){
-       console.log(uniqueArray1[key],key)
        if(uniqueArray1[key]===1){
            for(let key2 in uniqueArray2){
                if(key===key2){
