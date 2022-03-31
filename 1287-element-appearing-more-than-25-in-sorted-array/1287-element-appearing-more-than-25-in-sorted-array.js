@@ -3,18 +3,10 @@
  * @return {number}
  */
 var findSpecialInteger = function(arr) {
-  if (arr.length===1) return arr[0]
-  let quarter=arr.length/4;
-  let count=0;
-  let biggest=0;
-  for(let i=0;i<arr.length;i++){
-      count=1;
-     for(let j=0;j<arr.length;j++){
-         if(arr[i]===arr[j]&&i!==j){
-             count++  
-         }
-         if (count>quarter) return arr[i]
-     }
-  }
-    return biggest
+let map=new Map();
+    for(let i=0;i<arr.length;i++){
+        map.set(arr[i],(map.get(arr[i])||0) +1);
+        if(map.get(arr[i])>arr.length/4)return arr[i]
+    }
+    
 };
