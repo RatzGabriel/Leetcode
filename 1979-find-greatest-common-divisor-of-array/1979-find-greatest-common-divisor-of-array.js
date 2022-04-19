@@ -3,6 +3,7 @@
  * @return {number}
  */
 var findGCD = function(nums) {
+    if(nums.length===2&&nums[0]===nums[1])return nums[0]
 
     let sortedArray=nums.sort((a,b)=>{
         return a-b
@@ -12,7 +13,6 @@ var findGCD = function(nums) {
     let b= sortedArray[sortedArray.length-1];
     
     for(let i=b;i>0;i--){
-        console.log(i)
         if(a%i==0 && b%i===0)return i
     }
     
